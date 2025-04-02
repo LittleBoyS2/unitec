@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unitec</title>
+    <link rel="shortcut icon" href="static/IMG_4977.PNG" type="image/x-icon">
+    <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="menu">
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="{{ url_for('servicos') }}">Serviços</a></li>
+                <li><a href="{{ url_for('quemsomos') }}">Quem Somos</a></li>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="inicio" class="inicio-section">
+        <div class="intro-text">
+            <img src="../static/IMG_4977.PNG." alt="LogoMM" class="logo">
+            <h1>Serviços de instalações e reparos</h1>
+            <p>Não desperdice tempo, contate-nos</p>
+</section>
+
+    <!-- Seção Serviços -->
+    <section id="Serviços" class="serviços-section">
+        <h2>Serviços Exclusivos</h2>
+        <div class="serviços-grid">
+            <div class="serviços-container">
+                <div class="image-container">
+                    <img src="../static/foto.webp" alt=, id="carousel-serviços">
+                </div> 
+                <div class="serviços-text">
+                    <h3>Especialista em montagens </h3>
+                </div>
+            </div>
+
+            <div class="Serviços-container reverse">
+                <div class="image-container">
+                    <img src="../static/images.jpeg" alt="Instalaçoes">
+                </div>
+                <div class="Servços-text">
+                    <h3>Instalações e reparos</h3>
+                    <p>      </p>
+                </div>
+            </div>
+
+            
+            <section id="contato" class="contato-section">
+                <h2>Para orçamentos entre em Contato</h2>
+                <form action="processar_formulario.php" method="POST" class="form-contato">
+                    <div class="form-field">
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" name="nome" required placeholder="Seu nome">
+                    </div>
+            
+                    <div class="form-field">
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" required placeholder="Seu e-mail">
+                    </div>
+            
+                    <div class="form-field">
+                        <label for="telefone">Telefone:</label>
+                        <input type="tel" id="telefone" name="telefone" required placeholder="Seu telefone">
+                    </div>
+            
+                    <div class="form-field">
+                        <label for="mensagem">Mensagem:</label>
+                        <textarea id="mensagem" name="mensagem" required placeholder="Digite sua mensagem"></textarea>
+                    </div>
+            
+                    <div class="form-field">
+                        <button type="submit" class="submit-button">Enviar</button>
+                    </div>
+                </form>
+        
+    </section>
+
+<!-- Rodapé -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<footer style="background: linear-gradient(135deg, #210e69 0%, #280ad1 100%); color: #371681; padding: 20px 0; font-size: 14px;">
+            <div style="display: flex; justify-content: space-around; max-width: 1200px; margin: auto; flex-wrap: wrap;">
+            <!-- Logo e Nome -->
+            <div style="flex: 1; text-align: center; margin-bottom: 20px;">
+                <img src="../static/IMG_4977.PNG" alt="Logo" style="max-width: 250px;">
+            </div>
+    
+            <!-- Serviços -->
+            <div style="flex: 1; text-align: center; margin-bottom: 20px;">
+                <h3 style="color: #d6e9ff; margin-bottom: 10px;">Serviços</h3>
+                <ul style="list-style: none; padding: 0; margin: 0; color: #ccc;">
+                    <li>Instalações em Geral</li>
+                    <li> Reparos em Geral</li>
+                </ul>
+            </div>
+    
+            <!-- Links Úteis -->
+            <div style="flex: 1; text-align: center; margin-bottom: 20px;">
+                <h3 style="color: #d6e9ff; margin-bottom: 10px;">Links Úteis</h3>
+                <ul style="list-style: none; padding: 0; margin: 0; color: #ccc;">
+                    <li>Início</li>
+                    <li>Serviços</li>
+                    <li>Quem Somos</li>
+                </ul>
+            </div>
+        </div>
+    
+        <!-- Copyright -->
+        <div style="text-align: center; padding-top: 10px; border-top: 1px solid #444; margin-top: 20px; color: #ccc;">
+            Copyright© 2025 - All Rights Reserved.
+        </div>
+    </footer>
+    <scrip src="{{url_for('static', filename='main.js')}}"></script>
+
+</body>
+</html>

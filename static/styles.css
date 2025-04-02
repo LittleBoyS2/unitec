@@ -1,0 +1,261 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    /*background: rgb(2,0,36);
+    background: linear-gradient(60deg, rgb(247, 1, 255) 0%, rgb(0, 0, 0) 45%, rgb(247, 1, 255) 100%);*/
+    color: white;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+header {
+    width: 100%;
+    background-color: transparent; 
+    border: 2px solid var(--branco-principal);
+    backdrop-filter: blur(10px); /* Desfoque do conteúdo atrás do elemento */
+    padding: 5
+    
+    px 0;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 8px rgba(231, 217, 217, 0.2);
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li {
+    position: relative;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #d6e9ff;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 20px;
+    background: linear-gradient(#210e69, #280ad1, #371681); /* Gradiente para o fundo do link */
+    box-shadow: 0 4px 8px rgba(214, 233, 255, 0.5); /* Sombra corrigida */
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.menu li a:hover {
+    color: #ffffff;
+    background: linear-gradient(135deg, #210e69, #280ad1); /* Gradiente mais escuro no hover */
+    transform: scale(1.05); /* Efeito de crescimento no hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Sombra mais forte no hover */
+}
+
+/* Efeito de sublinhado animado */
+.menu li a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: #ffffff;
+    bottom: -5px;
+    left: 0;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+    transform-origin: right;
+}
+
+.menu li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/* Seção Início */
+.inicio-section {
+    display: flex;
+    flex-direction: column; /* Alinha conteúdo em coluna */
+    justify-content: center; /* Centraliza verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+    height: 100vh;
+    text-align: center;
+    background: linear-gradient(135deg, #280ad1 0%, #210e69 100%);
+    color: #fff;
+    position: relative;
+}
+
+.intro-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+}
+
+.intro-text .logo {
+    max-width: 500px;
+    margin-bottom: 40px;
+}
+
+.intro-text h1 {
+    font-size: 3.5rem;
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.intro-text p {
+    font-size: 1.5rem;
+    color: #eaeaea;
+    margin-bottom: 30px;
+    max-width: 600px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.contato-section {
+    background-color: #280ad1;
+    padding: 40px 20px;
+    margin-top: 40px;
+}
+
+h2 {
+    text-align: center;
+    color: #030d13;
+    height: 50%;
+}
+
+.form-contato {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-field {
+    margin-bottom: 15px;
+}
+
+.form-field label {
+    display: block;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.form-field input, .form-field textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.form-field textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.procedimentos-container.reverse {
+    flex-direction: row-reverse;
+}
+
+.image-container,
+.procedimentos-text {
+    padding: 8px;
+    background-color: #210e69;
+    border: 3px solid #210e69;
+    border-radius: 18px;
+    box-shadow: 20px 20px 8px rgba(0, 0, 0, 0.2);
+}
+
+.image-container img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+}
+
+.procedimentos-section h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    color: #210e69;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.procedimentos-text {
+    max-width: 400px;
+}
+
+.procedimentos-text h3 {
+    font-size: 1.8rem;
+    color: #210e69;
+    margin-bottom: 10px;
+}
+
+.procedimentos-text p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+
+/* Estilos básicos para o corpo */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Media Query para dispositivos móveis
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: row;
+        padding: 10px;
+        border-radius: 15px;
+        gap: 10px;
+    }*/
+
+    /* Ajustes para Seção Início */
+    .intro-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .intro-text p {
+        font-size: 1.2rem;
+    }
+
+    /* Ajustes para a Seção Procedimentos */
+    .procedimentos-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .procedimentos-container.reverse {
+        flex-direction: column;
+    }
+
+    .image-container img {
+        max-width: 100%;
+    }
+
+    /* Ajustes para a Seção Quem Sou */
+    .quem-somos-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 0 20px;
+    }
+
+    .quem-somos-text h2 {
+        font-size: 2rem;
+    }
